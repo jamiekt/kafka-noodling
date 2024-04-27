@@ -1,0 +1,55 @@
+{
+    "name": "kafka-noodling",
+    "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+    "features": {
+      "ghcr.io/devcontainers/features/github-cli:1": {},
+      "ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
+      "ghcr.io/guiyomh/features/vim": {},
+      "ghcr.io/mikaello/devcontainer-features/modern-shell-utils:1": {},
+      "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+      "ghcr.io/devcontainers/features/python:1": {
+        "version": "3.12",
+        "installTools": true,
+        "toolsToInstall": "black,mypy,ruff,pipenv,pytest,pylint"
+      },
+      "ghcr.io/devcontainers/features/java:1": {}
+    },
+    "mounts": [
+
+    ],
+    "customizations": {
+      "vscode": {
+        "extensions": [
+			"mhutchie.git-graph",
+			"eamodio.gitlens",
+			"ms-azuretools.vscode-docker",
+			"GitHub.copilot-chat",
+			"ms-python.vscode-pylance"
+		],
+        "settings": {
+          "editor.tabSize": 4,
+          "terminal.integrated.defaultProfile.linux": "zsh",
+          "terminal.integrated.profiles.linux": {
+            "bash": {
+              "path": "bash",
+              "icon": "terminal-bash"
+            },
+            "zsh": {
+              "path": "zsh"
+            },
+            "fish": {
+              "path": "fish"
+            },
+            "tmux": {
+              "path": "tmux",
+              "icon": "terminal-tmux"
+            },
+            "pwsh": {
+              "path": "pwsh",
+              "icon": "terminal-powershell"
+            }
+          }
+        }
+      }
+    }
+  }
